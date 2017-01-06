@@ -139,11 +139,12 @@ class Event_model extends CI_Model
 	public function get_active_events($limit = NULL)
 	{
 		$date = date('Y-m-d');
-  		$table = "event";
-		$where = "event_status = 1";
+  		$table = "post";
+		$where = "blog_category_id = 5 AND POST_status = 1";
 		
 		$this->db->where($where);
-		$this->db->group_by('event_start_time');
+		$this->db->order_by('last_modified', 'DESC');
+		//$this->db->group_by('event_start_time');
 		if($limit == NULL)
 		{
 			$query = $this->db->get($table);
@@ -156,6 +157,7 @@ class Event_model extends CI_Model
 		
 		return $query;
 	}
+	
 	public function get_events_on_dates($event_date)
 	{
 		$date = date('Y-m-d');

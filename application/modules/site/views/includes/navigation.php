@@ -54,7 +54,9 @@
             <div class="site-logo">
             <h1>
                 <a href="index.html">
-                    <!-- <span class="logo-icon"><i class="fa fa-heart"></i></span> -->
+                    <span class="logo-icon">
+                    	<img src="<?php echo base_url().'assets/logo/'.$logo;?>" class="img-responsive" />
+                    </span>
                     <span class="logo-text">Dominion <span>Generation</span></span>
                     <span class="logo-tagline"></span>
                 </a>
@@ -176,7 +178,7 @@
                     <?php echo $this->site_model->get_navigation();?>
                 </ul>
             </nav>       
-            <a href="index.html#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
+            <a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars"></i></a>
         </div>
     </header>
     <!-- End Site Header -->

@@ -52,7 +52,7 @@ class Site extends CI_Controller
 
 		$v_data['content'] = $this->load->view("home", $data, TRUE);
 		
-		$this->load->view("includes/templates/home", $v_data);
+		$this->load->view("includes/templates/general", $v_data);
 	}
 	
 	public function about()
